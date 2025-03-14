@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você me ama?</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #ff4081;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .yes {
+            background: #4caf50;
+            color: white;
+        }
+        .no {
+            background: #f44336;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Iasmin, você me ama? 🥰</h1>
+        <div class="buttons">
+            <button class="yes" onclick="alert('Eu sabia que Iasmin me amava! 😍')">Sim</button>
+            <button class="no" onmouseover="moveButton()">Não</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            let button = document.querySelector('.no');
+            let x = Math.random() * window.innerWidth * 0.8;
+            let y = Math.random() * window.innerHeight * 0.8;
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
